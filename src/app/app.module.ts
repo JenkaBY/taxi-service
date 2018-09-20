@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
+import {UserModule} from './user/user.module';
+import {UserFakeService} from './user/user-fake.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { HeaderComponent } from './layout/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UserModule
   ],
-  providers: [],
+  providers: [
+    {provide: 'userService', useClass: UserFakeService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

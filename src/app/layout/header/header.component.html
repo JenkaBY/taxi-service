@@ -1,0 +1,29 @@
+<header class="header">
+
+  <div class="header__item application-name"> {{appName}}</div>
+  <div class="header__item calendar">
+    <div class="calendar__img calendar__img_horizontal">
+      <img class="calendar__img" src="./assets/icons/calendar.png" alt="calendar_icon">
+      <div class="calendar__date">{{today}}</div>
+    </div>
+  </div>
+  <div class="header__item clock">
+    <img class="clock__img" src="./assets/icons/clock.png" alt="clock_icon">
+    <div class="clock__time">{{time}}</div>
+  </div>
+  <div class="header__item empty-space"></div>
+  <div class="header__item message">
+    <div class="message__img">
+      <img class="message__img_small" src="./assets/icons/email.png">
+    </div>
+  </div>
+  <div class="header__item user-profile">
+    <div class="user-profile_img">
+      <img src={{currentUser.image_url}} class="user-profile__img_small_circle" alt={{currentUser.getFullName()}}>
+    </div>
+    <div class="user-profile__name">
+      <div class="user-profile__first-name">{{currentUser.firstName}}</div>
+      <div class="user-profile__last-name">{{currentUser.lastName}}</div>
+    </div>
+  </div>
+</header>

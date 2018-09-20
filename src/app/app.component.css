@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px double black;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.main-block {
+  height: 800px;
+  border: 1px double red;
+}
