@@ -1,13 +1,41 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <body class="container">
-  <app-header></app-header>
+<app-header></app-header>
 
-  <article class="main-block">
-    <h3> Main app</h3>
-  </article>
+<article class="main-block main-block__article--flex_row">
 
-  <footer class="footer">
-    <h3>Footer</h3>
-  </footer>
+  <div class="main-block__item main-block__div--flex_column main-block__div--align-items_center orders__div--width_480-px
+              orders main-block__div--justify-content_center">
+
+    <div class="orders__div orders__div--height_100-percent orders__div--margin-left_right_15 orders__div--margin-top_15
+     orders__div--margin-bottom_4 orders__div--border-radius_3">
+      <app-order-incoming></app-order-incoming>
+    </div>
+
+    <div class="orders__div orders__div--height_100-percent orders__div--margin-left_right_15 orders__div--margin-bottom_15
+    orders__div--margin-top_4 orders__div--border-radius_3">
+      <app-orders></app-orders>
+    </div>
+
+  </div>
+
+  <div
+    class="main-block__item main-block__div--flex_column main-block__div--align-items_center map-and-cars map-and-cars__div--width_100_percents">
+
+    <div class="map-and-cars__div">
+      <app-map></app-map>
+    </div>
+
+    <div class="map-and-cars__div">
+      <app-cars></app-cars>
+    </div>
+
+  </div>
+
+</article>
+
+<!--<footer class="footer">-->
+<!--<h3>Footer</h3>-->
+<!--</footer>-->
 </body>
 

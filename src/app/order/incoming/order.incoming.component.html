@@ -1,0 +1,34 @@
+<div class="order order__div">
+
+  <div>{{title}}</div>
+
+  <form [formGroup]="orderForm">
+
+    <label>
+      <input type="checkbox" formControlName="isPreOrder">
+    </label>
+
+    <label>
+      <input type="text" formControlName="phoneNumber">
+    </label>
+
+    <label>
+      <input type="text" formControlName="from">
+    </label>
+
+    <label>
+      <input type="text" formControlName="to">
+    </label>
+    <label>
+      <input type="text" formControlName="intermediateAddresses">
+    </label>
+
+    <label>
+      <input type="text" formControlName="description">
+    </label>
+
+    <button>Отклонить</button>
+    <button>Принять</button>
+  </form>
+</div>
+
