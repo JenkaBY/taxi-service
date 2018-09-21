@@ -23,7 +23,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentUser = this.userService.getCurrentUser();
+    this.userService.getCurrentUser().subscribe(
+      (user: User) => this.currentUser = user,
+      (error) => console.log(error));
   }
 
   get today(): any {
