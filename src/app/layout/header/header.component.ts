@@ -11,8 +11,8 @@ import {User} from '../../shared/model/user';
 export class HeaderComponent implements OnInit {
   currentUser: User;
   appName = "Taxi Сервис";
-  private todayDate: String;
-  private timeNow: String;
+  private todayDate = 'Суббота, 23 марта';
+  private timeNow = '18:25';
 
   constructor(@Inject('userService') private userService: IUserService) {
   }
@@ -22,10 +22,10 @@ export class HeaderComponent implements OnInit {
   }
 
   get today(): any {
-    return "Суббота, 23 марта";
+    return this.todayDate;
   }
 
   get time(): any {
-    return "18:25";
+    return this.timeNow;
   }
 }

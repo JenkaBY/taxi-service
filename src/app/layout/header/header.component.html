@@ -1,29 +1,39 @@
 <header class="header">
 
-  <div class="header__item application-name"> {{appName}}</div>
-  <div class="header__item calendar">
-    <div class="calendar__img calendar__img_horizontal">
-      <img class="calendar__img" src="./assets/icons/calendar.png" alt="calendar_icon">
-      <div class="calendar__date">{{today}}</div>
-    </div>
+  <div class="header__item header__div--padding-right_40 application-name header__div--margin-left_30">
+    {{appName}}
   </div>
-  <div class="header__item clock">
-    <img class="clock__img" src="./assets/icons/clock.png" alt="clock_icon">
+
+  <div class="header__item header__item--color calendar">
+    <div class="calendar__img header__div--left-right-padding_10">
+      <img class="calendar__img header__img--size-20" src="./assets/icons/calendar.png" alt="calendar_icon">
+    </div>
+    <div class="calendar__date">{{today}}</div>
+  </div>
+
+  <div class="header__item header__item--color clock">
+    <div class="calendar__img header__div--left-right-padding_10">
+      <img class="clock__img header__img--size-20" src="./assets/icons/clock.png" alt="clock_icon">
+    </div>
     <div class="clock__time">{{time}}</div>
   </div>
+
   <div class="header__item empty-space"></div>
-  <div class="header__item message">
+
+  <div class="header__item message header__div--left-right-padding_10">
     <div class="message__img">
-      <img class="message__img_small" src="./assets/icons/email.png">
+      <img class="message__img_small header__img--size-20" src="./assets/icons/email.png">
     </div>
   </div>
-  <div class="header__item user-profile">
-    <div class="user-profile_img">
+
+  <div class="header__item user-profile user-profile__div--grow_1">
+    <div class="user-profile_img header__div--left-right-padding_10">
       <img src={{currentUser.image_url}} class="user-profile__img_small_circle" alt={{currentUser.getFullName()}}>
     </div>
-    <div class="user-profile__name">
-      <div class="user-profile__first-name">{{currentUser.firstName}}</div>
-      <div class="user-profile__last-name">{{currentUser.lastName}}</div>
+
+    <div class="user-profile__name header__item--color">
+      <div class="user-profile__first-name header__div--top-bottom-padding_5">{{currentUser.firstName}}</div>
+      <div class="user-profile__last-name header__div--top-bottom-padding_5">{{currentUser.lastName}}</div>
     </div>
   </div>
 </header>
